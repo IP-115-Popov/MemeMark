@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-25T11:16:19.426Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="xVKZzoL9a9uJXzm1dJbv" version="22.1.11" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-25T11:22:39.130Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="yZ2BCjEPHtv2TdU0QhND" version="22.1.11" type="device">
   <diagram name="Страница — 1" id="PwJp0gJ4gR8qNzRMmNEr">
     <mxGraphModel dx="3585" dy="2103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
@@ -24,7 +24,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="WU4Sz1viQD_uvnj4yaX7-2" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="670" width="1360" height="430" as="geometry" />
+          <mxGeometry x="60" y="670" width="860" height="430" as="geometry" />
         </mxCell>
         <mxCell id="WU4Sz1viQD_uvnj4yaX7-3" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="140" y="1190" width="1000" height="750" as="geometry" />
@@ -179,7 +179,7 @@
           <mxGeometry x="545" y="220" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="WU4Sz1viQD_uvnj4yaX7-56" value="User model" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1240" y="700" width="120" height="60" as="geometry" />
+          <mxGeometry x="730" y="730" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

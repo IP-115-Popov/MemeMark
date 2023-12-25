@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MemeMark</string>
+    <string name="enterLogin">Введите логин</string>
+    <string name="createAccount">Создайте аккаунт</string>
+    <string name="enterEmail">Введите email</string>
+    <string name="EnterPass">Введите pass</string>
+    <string name="Registration">Регистрация</string>
+    <string name="Authorization">Авторизация</string>
 </resources>
