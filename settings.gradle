@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "MemeMark"
 include ':app'
+include ':domain'
+include ':data'
