@@ -6,4 +6,5 @@
     <string name="EnterPass">Введите pass</string>
     <string name="Registration">Регистрация</string>
     <string name="Authorization">Авторизация</string>
+    <string name="Register">Заригестрироватся</string>
 </resources>
