@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             vm.singUp(tvUserLogin.text.toString(), tvUserEmail.text.toString(), tvUserPass.text.toString())
         }
         tvRegToLink.setOnClickListener {
-            vm.SignUpToIn()
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }

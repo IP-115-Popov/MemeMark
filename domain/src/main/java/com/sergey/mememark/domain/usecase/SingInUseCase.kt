@@ -1,7 +1,8 @@
 package com.sergey.mememark.domain.usecase
 
-class MoveSignUpToIn {
+class SingInUseCase {
     fun exectute()
     {
+
     }
 }

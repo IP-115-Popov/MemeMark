@@ -5,6 +5,7 @@ import android.content.Context
 import com.sergey.mememark.di.AppComponent
 import com.sergey.mememark.di.AppModule
 import com.sergey.mememark.di.DaggerAppComponent
+import com.sergey.mememark.di.DataModule
 
 class App : Application() {
     lateinit var appComponent: AppComponent
@@ -12,7 +13,9 @@ class App : Application() {
         super.onCreate()
 
 
-        appComponent = DaggerAppComponent.create()
+        appComponent = DaggerAppComponent.builder()
+            .context(context = this)
+            .build()
     }
 }
 val Context.appComponent: AppComponent
