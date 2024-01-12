@@ -1,10 +1,12 @@
 package com.sergey.mememark.presenttation.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.sergey.mememark.R
 import com.sergey.mememark.app.App
+import com.sergey.mememark.app.appComponent
 import com.sergey.mememark.databinding.ActivityMainBinding
 import com.sergey.mememark.presenttation.ViewModel.MainViewModel
 import com.sergey.mememark.presenttation.ViewModel.MainViewModelFactory
@@ -21,8 +23,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        (applicationContext as App).appComponent.inject(this)
+
+        appComponent.inject(this)
         vm = ViewModelProvider(this,vmFactory)
             .get(MainViewModel::class.java)
+
+        val bthSingUp = binding.buttonReg
+        val tvUserLogin = binding.userLogin
+        val tvUserEmail = binding.userEmail
+        val tvUserPass = binding.userPass
+        val tvRegToLink = binding.regToLink
+        bthSingUp.setOnClickListener {
+            vm.singUp(tvUserLogin.text.toString(), tvUserEmail.text.toString(), tvUserPass.text.toString())
+        }
+        tvRegToLink.setOnClickListener {
+            vm.SignUpToIn()
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
