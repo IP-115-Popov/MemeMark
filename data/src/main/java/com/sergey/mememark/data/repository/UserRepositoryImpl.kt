@@ -13,4 +13,8 @@ class UserRepositoryImpl(private val userStorage: IUserStorage): IUserRepository
             user.pass
         ))
     }
+
+    override fun userIsInRepository(login: String, pass: String): Boolean {
+       return userStorage.get(login,pass)
+    }
 }

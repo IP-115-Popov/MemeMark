@@ -6,8 +6,8 @@ import com.sergey.mememark.domain.usecase.SingInUseCase
 class SingInViewModel(
     private val singInUseCase: SingInUseCase
 ): ViewModel(){
-    fun SignIn()
+    fun SignIn(login:String, pass:String):Boolean
     {
-        singInUseCase.exectute()
+        return singInUseCase.exectute(login,pass)
     }
 }

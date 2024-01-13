@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.sergey.mememark.domain.usecase.SignUpUseCase
 import com.sergey.mememark.domain.usecase.SingInUseCase
 
-class SingInViewModelFectory(
+class SingInViewModelFactory(
     private val singInUseCase: SingInUseCase
 ): ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

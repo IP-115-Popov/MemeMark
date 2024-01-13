@@ -32,26 +32,10 @@ class SharedPrefUserStorage (val context: Context, val factory: SQLiteDatabase.C
         return if (rez == -1L) false else true
     }
 
-    override fun get(): UserForStorage {
-
+    override fun get(login: String, pass: String): Boolean {
         val db = this.readableDatabase
-
-        val result = db.rawQuery("SELECT * FROM users", null)
-        val loginIndex = result.getColumnIndex("login")
-        val emailIndex = result.getColumnIndex("email")
-        val passIndex = result.getColumnIndex("pass")
-
-
-        val login = result.getString(loginIndex)
-        val email = result.getString(emailIndex)
-        val pass = result.getString(passIndex)
-
-
-        val user = UserForStorage(login, email, pass)
-
-        result.close()
-
-        return user
+        val result = db.rawQuery("SELECT * FROM users WHERE login = '$login' AND pass = '$pass'",null)
+        return result.moveToFirst()
     }
 
 

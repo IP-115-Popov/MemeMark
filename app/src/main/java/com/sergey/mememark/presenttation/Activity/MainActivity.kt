@@ -3,6 +3,7 @@ package com.sergey.mememark.presenttation.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.sergey.mememark.R
 import com.sergey.mememark.app.App
@@ -34,7 +35,17 @@ class MainActivity : AppCompatActivity() {
         val tvUserPass = binding.userPass
         val tvRegToLink = binding.regToLink
         bthSingUp.setOnClickListener {
-            vm.singUp(tvUserLogin.text.toString(), tvUserEmail.text.toString(), tvUserPass.text.toString())
+            if (tvUserLogin.text.isEmpty() || tvUserEmail.text.isEmpty() || tvUserPass.text.isEmpty())
+                Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_LONG).show()
+            else {
+                vm.singUp(
+                    tvUserLogin.text.toString(),
+                    tvUserEmail.text.toString(),
+                    tvUserPass.text.toString()
+                )
+                Toast.makeText(this, "пользователь $tvUserLogin авторизован", Toast.LENGTH_LONG)
+                    .show()
+            }
         }
         tvRegToLink.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
